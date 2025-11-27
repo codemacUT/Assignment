@@ -5,8 +5,8 @@ A premium, dark-themed Esports tournament application UI built with Flutter. Thi
 ## � Screenshots
 
 <p align="center">
-  <img src="screenshots/screenshot1.png" width="45%" alt="Home Screen Top" />
-  <img src="screenshots/screenshot2.png" width="45%" alt="Home Screen Bottom" />
+  <img src="screenshots/Screenshot1.png" width="45%" alt="Home Screen Top" />
+  <img src="screenshots/Screenshot2.png" width="45%" alt="Home Screen Bottom" />
 </p>
 
 ## �📱 Features
@@ -39,6 +39,16 @@ A premium, dark-themed Esports tournament application UI built with Flutter. Thi
 - **Language**: Dart
 - **Architecture**: Modular widget-based structure for reusability and maintainability.
 
+## 🌐 API Integration (Dio)
+
+This project uses **Dio** for efficient and robust network requests.
+
+- **Why Dio?**: Chosen for its advanced features like interceptors, global configuration, and better error handling compared to `http`.
+- **Implementation Details**:
+  - **DioClient**: A singleton wrapper with logging interceptors and default headers (including `User-Agent` to bypass 403 errors).
+  - **Repository Pattern**: `MatchRepository` handles data fetching and transformation, keeping the UI clean.
+  - **State Management**: `Provider` manages the data flow, ensuring the UI updates automatically when data is fetched.
+
 ## 📂 Project Structure
 
 ```
@@ -58,7 +68,7 @@ lib/
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/esports-app-ui.git
+    git clone [https://github.com/codemacUT/Assignment]
     ```
 2.  **Navigate to the project directory**:
     ```bash
@@ -80,6 +90,15 @@ The UI is designed with a focus on a "Gamer" aesthetic, utilizing:
 - Vibrant red accents (`#D7333A`).
 - Custom fonts (`LCT Picon`, `Suisse Int'l Mono`).
 - Gradient borders and glowing text effects.
+
+## 📌 Notes for Reviewers
+
+- This project is a **frontend-only Flutter implementation** created specifically for the internship assignment.
+- The UI is built to match the provided Figma design as closely as possible, focusing on layout accuracy and styling.
+- No backend, APIs, or real-time data sources are included—only static UI components.
+- All widgets are structured for readability and reusability, following a modular approach.
+- The app is responsive across different screen sizes and maintains design consistency.
+- The codebase avoids unnecessary complexity and sticks to clean, maintainable Flutter practices.
 
 ## 📝 License
 

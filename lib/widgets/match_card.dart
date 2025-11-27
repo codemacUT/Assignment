@@ -7,11 +7,15 @@ import '../constants/app_text_styles.dart';
 class MatchCard extends StatelessWidget {
   final String imagePath;
   final String logoPath;
+  final String title;
+  final String description;
 
   const MatchCard({
     super.key,
     required this.imagePath,
     required this.logoPath,
+    required this.title,
+    required this.description,
   });
 
   @override
@@ -110,13 +114,13 @@ class MatchCard extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
-                            'BATTLE ROYAL',
+                          Text(
+                            title.toUpperCase(),
                             style: AppTextStyles.bodySmall,
                             overflow: TextOverflow.ellipsis,
                           ),
                           Text(
-                            'Erangle',
+                            description,
                             style: AppTextStyles.bodySmallGrey,
                             overflow: TextOverflow.ellipsis,
                           ),
